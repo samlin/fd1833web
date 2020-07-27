@@ -11,5 +11,8 @@ public class AnimalTest {
         //使用泛型后,jdk7以后,后面的泛型类型可以不写,这种写法简称菱形语法
         Animal<Dog> dog=new Animal<>();
 
+//        使用泛型后,传入的类型必须要跟定义的一致,从而解决了类型强转的异常问题,把运行期异常转化成编译期异常
+        dog.setT(new Dog());
+
     }
 }
