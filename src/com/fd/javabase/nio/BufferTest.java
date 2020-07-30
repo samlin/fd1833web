@@ -8,6 +8,9 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
+import java.util.Set;
+import java.util.SortedMap;
 
 public class BufferTest {
     @Test
@@ -94,5 +97,18 @@ public class BufferTest {
 //        关闭Channel
         inChannel.close();
         outChannel.close();
+    }
+
+    @Test
+    public void testCharset() throws Exception {
+        //        得到系统所有的编码集
+        SortedMap<String, Charset> stringCharsetSortedMap = Charset.availableCharsets();
+        Set<String> strings = stringCharsetSortedMap.keySet();
+        for (String encoding : strings) {
+            System.out.println( "string = " + encoding );
+        }
+        //得到本地系统的编码集
+        String property = System.getProperty( "file.encoding" );
+        System.out.println( "property = " + property );
     }
 }
