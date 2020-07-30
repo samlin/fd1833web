@@ -2,7 +2,10 @@ package com.fd.javabase.designpattern;
 
 import org.junit.Test;
 
+import java.io.File;
+import java.io.OutputStream;
 import java.io.PrintStream;
+import java.io.PrintWriter;
 
 public class EatTest {
     /**
@@ -16,18 +19,21 @@ public class EatTest {
 
     /**
      * 如果一个参数,表示用筷子吃饭
+     *
      * @param tool
      * @throws Exception
      */
     public void eat(String tool) throws Exception {
-        eat(tool,null);
+        eat(tool, null);
     }
+
     /**
      * 如果2个参数,表示用刀子,叉子吃饭
+     *
      * @param tool
      * @throws Exception
      */
-    public void eat(String tool,String toolPar) throws Exception {
+    public void eat(String tool, String toolPar) throws Exception {
         if (toolPar == null) {
             if (tool == null) {
                 System.out.println("我是手抓羊肉");
@@ -36,17 +42,25 @@ public class EatTest {
         }
         System.out.println("我吃西餐");
     }
-@Test
-public void test() throws Exception{
+
+    @Test
+    public void test() throws Exception {
         //定义一个打印流
-    PrintStream printStream = new PrintStream( "d:/printStream.txt" );
+        PrintStream printStream = new PrintStream("d:/printStream.txt");
 
-    //通过setOut让当前System的out类进行重定向,以后所有的往控制台的输出都会重定向到目标流中,也就是说控制台不会再输出
-    System.setOut( printStream );
+        //通过setOut让当前System的out类进行重定向,以后所有的往控制台的输出都会重定向到目标流中,也就是说控制台不会再输出
+        System.setOut(printStream);
 
-    //默认向控制台打印..
-    System.out.println( "printStream = " + printStream );
-    System.out.println("我是System打印出来的 ");
-}
+        //默认向控制台打印..
+        System.out.println("printStream = " + printStream);
+        System.out.println("我是System打印出来的 ");
+    }
 
+    @Test
+    public void testPrint() throws Exception {
+        OutputStream outputStream=null;
+
+        PrintWriter writer = new PrintWriter(new File(""));
+        writer.p
+    }
 }
