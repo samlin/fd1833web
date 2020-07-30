@@ -2,6 +2,7 @@ package com.fd.javabase.nio;
 
 import org.junit.Test;
 
+import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 
 public class BufferTest {
@@ -48,5 +49,11 @@ public class BufferTest {
         char c = charBuffer.get();
         System.out.println("c = " + c);
 
+    }
+
+    @Test
+    public void testBufferType() throws Exception {
+//        创建一个间接缓存区,一般有JVM来控制,安全性比较高,但性能比较低
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
     }
 }
