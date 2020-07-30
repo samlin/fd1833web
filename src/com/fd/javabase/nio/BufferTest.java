@@ -90,5 +90,9 @@ public class BufferTest {
             byteBuffer.clear();
 
         }
+
+//        关闭Channel
+        inChannel.close();
+        outChannel.close();
     }
 }
