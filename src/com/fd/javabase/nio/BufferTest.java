@@ -41,6 +41,12 @@ public class BufferTest {
         System.out.println("charBuffer.limit() = " + charBuffer.limit());
         System.out.println("charBuffer.position() = " + charBuffer.position());
 
+        charBuffer.put("123");
+
+//       切记,如果put了数据,要读取的时候,一定要通过filp切换为读模式,否则获取的数据为无效数据(缓冲区以前插入的数据)
+        charBuffer.flip();
+        char c = charBuffer.get();
+        System.out.println("c = " + c);
 
     }
 }
