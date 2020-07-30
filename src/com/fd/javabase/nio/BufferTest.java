@@ -2,8 +2,11 @@ package com.fd.javabase.nio;
 
 import org.junit.Test;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
+import java.nio.channels.FileChannel;
 
 public class BufferTest {
     @Test
@@ -58,5 +61,14 @@ public class BufferTest {
 
 //        创建直接缓存区,是跳过JVM直接从操作系统中获得内存,性能比较高,但因为不受JVM的控制,安全性比较低
         ByteBuffer byteBuffer1 = ByteBuffer.allocateDirect(1024);
+    }
+
+    @Test
+    public void testChannel() throws Exception {
+        InputStream inputStream=null;
+
+        //默认FileChannel不能用new 关键字,而要使用功能FileInputStream来构建,不是InputStream
+        FileInputStream fileInputStream = new FileInputStream("d:/printStream.txt");
+        FileChannel channel = fileInputStream.getChannel();
     }
 }
