@@ -3,6 +3,7 @@ package com.fd.javabase.nio;
 import org.junit.Test;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -70,5 +71,9 @@ public class BufferTest {
         //默认FileChannel不能用new 关键字,而要使用功能FileInputStream来构建,不是InputStream
         FileInputStream fileInputStream = new FileInputStream("d:/printStream.txt");
         FileChannel channel = fileInputStream.getChannel();
+
+        //构建目标输出Channel
+        FileOutputStream fileOutputStream = new FileOutputStream("d:/out.txt");
+        FileChannel outChannel = fileOutputStream.getChannel();
     }
 }
