@@ -9,5 +9,11 @@ public class BufferTest {
     public void testBuffer() throws Exception {
 //        1.创建Buffer,默认情况下Buffer只能工厂方法获取,不能使用new关键字
         CharBuffer charBuffer = CharBuffer.allocate(10);
+
+        // 通过打印初始化的Buffer的属性可以确定:默认Buffer是写模式
+        System.out.println("初始化");
+        System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
+        System.out.println("charBuffer.limit() = " + charBuffer.limit());
+        System.out.println("charBuffer.position() = " + charBuffer.position());
     }
 }
