@@ -55,5 +55,8 @@ public class BufferTest {
     public void testBufferType() throws Exception {
 //        创建一个间接缓存区,一般有JVM来控制,安全性比较高,但性能比较低
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+//        创建直接缓存区,是跳过JVM直接从操作系统中获得内存,性能比较高,但因为不受JVM的控制,安全性比较低
+        ByteBuffer byteBuffer1 = ByteBuffer.allocateDirect(1024);
     }
 }
