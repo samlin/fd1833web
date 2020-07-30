@@ -15,5 +15,13 @@ public class BufferTest {
         System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
         System.out.println("charBuffer.limit() = " + charBuffer.limit());
         System.out.println("charBuffer.position() = " + charBuffer.position());
+
+//      2. 往Buffer中写数据,然后打印各个属性
+        charBuffer.put("abcd");
+        System.out.println("--------------------------------");
+        System.out.println("写入abcd后的各个属性的数据 ");
+        System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
+        System.out.println("charBuffer.limit() = " + charBuffer.limit());
+        System.out.println("charBuffer.position() = " + charBuffer.position());
     }
 }
