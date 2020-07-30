@@ -70,10 +70,13 @@ public class BufferTest {
 
         //默认FileChannel不能用new 关键字,而要使用功能FileInputStream来构建,不是InputStream
         FileInputStream fileInputStream = new FileInputStream("d:/printStream.txt");
-        FileChannel channel = fileInputStream.getChannel();
+        FileChannel inChannel = fileInputStream.getChannel();
 
         //构建目标输出Channel
         FileOutputStream fileOutputStream = new FileOutputStream("d:/out.txt");
         FileChannel outChannel = fileOutputStream.getChannel();
+
+        //定义一个Buffer方便用Channel进行文件复制
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
     }
 }
