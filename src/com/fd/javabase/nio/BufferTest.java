@@ -31,5 +31,16 @@ public class BufferTest {
         System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
         System.out.println("charBuffer.limit() = " + charBuffer.limit());
         System.out.println("charBuffer.position() = " + charBuffer.position());
+
+
+//      4. 清理Buffer
+        System.out.println("-----------调用clear后的属性---------------------");
+        charBuffer.clear();
+        System.out.println("写入abcd后的各个属性的数据 ");
+        System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
+        System.out.println("charBuffer.limit() = " + charBuffer.limit());
+        System.out.println("charBuffer.position() = " + charBuffer.position());
+
+
     }
 }
