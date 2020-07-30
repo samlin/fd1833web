@@ -78,5 +78,11 @@ public class BufferTest {
 
         //定义一个Buffer方便用Channel进行文件复制
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+        while (inChannel.read(byteBuffer) != -1) {
+//            切换为读模式,从buffer读取数据出来写到输出Channel中
+            byteBuffer.flip();
+
+        }
     }
 }
