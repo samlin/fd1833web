@@ -83,6 +83,12 @@ public class BufferTest {
 //            切换为读模式,从buffer读取数据出来写到输出Channel中
             byteBuffer.flip();
 
+//            从Buffer中读取数据出来,写入目标Channel
+            outChannel.write(byteBuffer);
+
+            //每次从Buffer读取完数据后,默认要清理原有buffer数据,下次从0开始读取
+            byteBuffer.clear();
+
         }
     }
 }
