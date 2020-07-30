@@ -23,5 +23,13 @@ public class BufferTest {
         System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
         System.out.println("charBuffer.limit() = " + charBuffer.limit());
         System.out.println("charBuffer.position() = " + charBuffer.position());
+
+//      3. 通过flip方法,切换为读模式
+        System.out.println("-----------切换为读模式后面的各个属性---------------------");
+        charBuffer.flip();
+        System.out.println("写入abcd后的各个属性的数据 ");
+        System.out.println("charBuffer.capacity() = " + charBuffer.capacity());
+        System.out.println("charBuffer.limit() = " + charBuffer.limit());
+        System.out.println("charBuffer.position() = " + charBuffer.position());
     }
 }
