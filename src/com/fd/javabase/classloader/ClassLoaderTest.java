@@ -5,6 +5,7 @@ import com.fd.javabase.Cat;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.Properties;
 
 public class ClassLoaderTest {
@@ -58,5 +59,17 @@ public class ClassLoaderTest {
         System.out.println("integerClass = " + integerClass);
         Class<Void> voidClass1 = void.class;
         System.out.println("void.class = " + voidClass1);
+    }
+
+    @Test
+    public void testFileds() throws Exception {
+        Class<Dog> dogClass = Dog.class;
+
+//        getFields获取当前类和父类中所有public的字段
+        Field[] fields = dogClass.getFields();
+        for (Field field : fields) {
+            System.out.println("field = " + field);
+        }
+
     }
 }

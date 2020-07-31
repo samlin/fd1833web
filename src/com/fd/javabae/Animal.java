@@ -4,7 +4,7 @@ package com.fd.javabae;
  * 定义一个抽象动物类,作为具体动物的父类
  */
 public abstract class Animal  implements Like{
-    private  String name;
+    public  String name;
     private int age;
 
     public String getName() {
