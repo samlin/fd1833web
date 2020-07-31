@@ -71,5 +71,11 @@ public class ClassLoaderTest {
             System.out.println("field = " + field);
         }
 
+        //getDeclaredFields获取当前类中所有字段,包括public和private,不能获取父类的
+        Field[] declaredFields = dogClass.getDeclaredFields();
+        for (Field declaredField : declaredFields) {
+            System.out.println("declaredField = " + declaredField);
+        }
+
     }
 }

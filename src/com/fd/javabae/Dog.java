@@ -10,6 +10,7 @@ public class Dog extends Animal {
     }
 
     public int speed;
+    private String address;
 
     @Override
     public void run() {
