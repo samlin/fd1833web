@@ -106,5 +106,8 @@ public class ClassLoaderTest {
         //通过反射得到一个方法
         Method eat = dogClass.getMethod("eat");
 
+//        通过method反射来调用方法,第一个参数是调用者对象,必须是实例化后的对象
+        eat.invoke(Dog.class.newInstance());
+
     }
 }
