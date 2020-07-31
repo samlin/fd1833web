@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.Properties;
 
 public class ClassLoaderTest {
@@ -77,5 +78,24 @@ public class ClassLoaderTest {
             System.out.println("declaredField = " + declaredField);
         }
 
+    }
+
+    @Test
+    public void testField() throws Exception {
+
+        //演示对单个字段属性的获取
+        Class<Dog> dogClass = Dog.class;
+        Field name = dogClass.getField("speed");
+
+        //      1.字段名称
+        System.out.println( "name.getName() = " + name.getName() );
+        //2.字段类型
+        System.out.println( "name.getType() = " + name.getType() );
+//
+        //3. 返回字段修饰符,但默认是int类型,
+        int modifiers = name.getModifiers();
+        System.out.println( "modifiers = " + modifiers );
+//    要调用Modifier.toString(int i)进行转义,显示字符串类型的结果,譬如public static等
+        System.out.println(  "modifiers = " + Modifier.toString( modifiers ) );
     }
 }
