@@ -35,4 +35,18 @@ public class ClassLoaderTest {
         String name = properties.getProperty("name");
         System.out.println("name = " + name);
     }
+
+    @Test
+    public void testClassType() throws Exception {
+        //一般通过<类.class>可以获取当前类的class对象,但是我们常见的基本类型和void等,也有它自己的Class对象
+        Class<Integer> integerClass = int.class;
+        Class<Void> voidClass = void.class;
+        Class<Boolean> booleanClass = boolean.class;
+        Class classClass = Class.class;
+        Class<byte[]> aClass = byte[].class;
+        Class<byte[][]> aClass1 = byte[][].class;
+        System.out.println("integerClass = " + integerClass);
+        Class<Void> voidClass1 = void.class;
+        System.out.println("void.class = " + voidClass1);
+    }
 }
