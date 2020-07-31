@@ -29,12 +29,13 @@ public class LambdaTest {
     public void testFdFunction() throws Exception{
         doit(new FDInterface() {
             @Override
-            public void exe() {
-
+            public int exe() {
+return 0;
             }
         });
 
-        doit(()-> System.out.println("我是lambda的实现"));
+        //如果有返回值,并且只有一行代码,那么return可以省略
+        doit(()->  1);
 
     }
 

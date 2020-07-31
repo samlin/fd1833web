@@ -5,5 +5,5 @@ package com.fd.javabase.lambda;
  */
 @FunctionalInterface
 public interface FDInterface {
-    void exe();
+    int exe();
 }
