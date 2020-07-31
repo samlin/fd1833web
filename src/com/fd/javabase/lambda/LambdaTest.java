@@ -15,5 +15,11 @@ public class LambdaTest {
 
 //        调用匿名类的对象的run方法
         runnable.run();
+
+//        使用Lambda表达式代替匿名类
+        Runnable lambda = () ->{System.out.println("我是lambda表达式打印");};
+        lambda.run();
+
+
     }
 }
