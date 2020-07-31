@@ -16,4 +16,8 @@ public class Dog extends Animal {
     public void run() {
 
     }
+
+    public void eat() throws Exception {
+        System.out.println("狗喜欢吃骨头");
+    }
 }

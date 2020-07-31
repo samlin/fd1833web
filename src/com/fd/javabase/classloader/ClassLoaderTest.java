@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Properties;
 
@@ -97,5 +98,13 @@ public class ClassLoaderTest {
         System.out.println( "modifiers = " + modifiers );
 //    要调用Modifier.toString(int i)进行转义,显示字符串类型的结果,譬如public static等
         System.out.println(  "modifiers = " + Modifier.toString( modifiers ) );
+    }
+    @Test
+    public void testMethodInvoke() throws Exception{
+        Class<Dog> dogClass = Dog.class;
+
+        //通过反射得到一个方法
+        Method eat = dogClass.getMethod("eat");
+
     }
 }
