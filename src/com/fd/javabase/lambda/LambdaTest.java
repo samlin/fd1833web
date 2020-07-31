@@ -55,6 +55,8 @@ public class LambdaTest {
     public void testJustDoIt() throws Exception{
         //用lambda表达式演示通过Consumer接口传递两个代码块,实现两个功能
         justDoIt((x)-> System.out.println(x));
-        justDoIt((x)-> System.out.println("fd1833"+x));
+
+        //如果lambda表达式是一个参数,那么左边参数列表的小括号可以省略
+        justDoIt(x-> System.out.println("fd1833"+x));
     }
 }
