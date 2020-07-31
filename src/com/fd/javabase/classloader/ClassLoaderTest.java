@@ -34,6 +34,10 @@ public class ClassLoaderTest {
         properties.load(resourceAsStream);
         String name = properties.getProperty("name");
         System.out.println("name = " + name);
+
+//通过字符串得到Class对象,是框架中用的最多的一种加载Class的方式
+        Class<?> aClass = Class.forName(name);
+        System.out.println("aClass = " + aClass);
     }
 
     @Test
