@@ -57,6 +57,7 @@ public class LambdaTest {
         justDoIt((x)-> System.out.println(x));
 
         //如果lambda表达式是一个参数,那么左边参数列表的小括号可以省略
+        //如果右边代码块只有一条语句,那么大括号可以省略
         justDoIt(x-> System.out.println("fd1833"+x));
     }
 }
