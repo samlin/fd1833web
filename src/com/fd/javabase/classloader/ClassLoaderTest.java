@@ -4,6 +4,7 @@ import com.fd.javabae.Dog;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.Properties;
 
 public class ClassLoaderTest {
     @Test
@@ -27,5 +28,11 @@ public class ClassLoaderTest {
 //       通过getResourceAsStream方法可以从ClassPath中获取相对配置文件的路径,也是项目中找配置文件的标准用法
         InputStream resourceAsStream = systemClassLoader.getResourceAsStream("config.properties");
 
+
+        //通过前面的inputstream可以让Properties直接获取配置文件的值,也是项目中标准用法
+        Properties properties = new Properties();
+        properties.load(resourceAsStream);
+        String name = properties.getProperty("name");
+        System.out.println("name = " + name);
     }
 }
