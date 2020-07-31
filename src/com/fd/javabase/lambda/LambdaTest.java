@@ -2,6 +2,8 @@ package com.fd.javabase.lambda;
 
 import org.junit.Test;
 
+import java.util.function.Consumer;
+
 public class LambdaTest {
     @Test
     public void testLambda() throws Exception{
@@ -43,5 +45,16 @@ public class LambdaTest {
     public void testDoit() throws Exception{
         //演示是使用自定义函数式接口进行lambad表达式传参(传递函数)
         doit(()-> System.out.println("我是lambda的实现"));
+    }
+
+
+    public void justDoIt(Consumer<String> consumer) throws Exception{
+        consumer.accept("123");
+    }
+    @Test
+    public void testJustDoIt() throws Exception{
+        //用lambda表达式演示通过Consumer接口传递两个代码块,实现两个功能
+        justDoIt((x)-> System.out.println(x));
+        justDoIt((x)-> System.out.println("fd1833"+x));
     }
 }
