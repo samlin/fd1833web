@@ -16,4 +16,9 @@ public class Cat extends Animal{
         Cat cat = new Cat();
         cat.setName("旺财");
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

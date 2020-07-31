@@ -1,6 +1,7 @@
 package com.fd.javabase.classloader;
 
 import com.fd.javabae.Dog;
+import com.fd.javabase.Cat;
 import org.junit.Test;
 
 import java.io.InputStream;
@@ -38,6 +39,11 @@ public class ClassLoaderTest {
 //通过字符串得到Class对象,是框架中用的最多的一种加载Class的方式
         Class<?> aClass = Class.forName(name);
         System.out.println("aClass = " + aClass);
+
+//      newInstance通过Class对象来新建一个对象,代替了new关键字,提高了系统的扩展性,默认调用的是对象的无参构造器,所以当前对象一定要有无参构造器
+        Cat o = (Cat)aClass.newInstance();
+        o.setName("旺财");
+        System.out.println("o = " + o);
     }
 
     @Test
