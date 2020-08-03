@@ -45,7 +45,7 @@ return 0;
     @Test
     public void testDoit() throws Exception{
         //演示是使用自定义函数式接口进行lambad表达式传参(传递函数)
-        doit(()-> System.out.println("我是lambda的实现"));
+        doit(()-> 1);
     }
 
 
