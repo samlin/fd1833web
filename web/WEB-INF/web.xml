@@ -8,6 +8,13 @@
         <servlet-class>com.fd.servlet.FdServlet</servlet-class>
 
     <!--  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1-->
+
+        <!-- 用来定义当前Servlet的配置属性 用ServletConfig对象获取  不变的写在代码中,变化的写在配置中 -->
+        <init-param>
+            <param-name>dbName</param-name>
+            <param-value>fd1833db</param-value>
+        </init-param>
+
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>

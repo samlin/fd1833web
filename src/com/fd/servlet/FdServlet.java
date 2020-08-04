@@ -23,6 +23,10 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         System.out.println("FdServlet.init");
+
+        //用来获取web.xml中init-param节点定义的变量
+        String dbName = config.getInitParameter("dbName");
+        System.out.println("dbName = " + dbName);
     }
 
     @Override
