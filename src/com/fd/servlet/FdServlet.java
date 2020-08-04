@@ -27,6 +27,10 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
         //用来获取web.xml中init-param节点定义的变量
         String dbName = config.getInitParameter("dbName");
         System.out.println("dbName = " + dbName);
+
+        //通过全局上下文ServletContext获取全局配置参数
+        String password = config.getServletContext().getInitParameter("password");
+        System.out.println("password = " + password);
     }
 
     @Override
