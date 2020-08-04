@@ -14,6 +14,7 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
 
     /**
      * 定义Servlet的声明周期的init方法,但是要注意重写有参的init(ServletConfig config)
+     * 经过测试,启动tomcat时,,默认没有加载Servlet的初始化方法
      * @param config
      * @throws ServletException
      */
@@ -31,5 +32,14 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         System.out.println("FdServlet.doGet");
+    }
+
+    /**
+     * 定义了Servlet生命周期中的销毁方法
+     */
+    @Override
+    public void destroy() {
+        super.destroy();
+        System.out.println("FdServlet.destroy");
     }
 }
