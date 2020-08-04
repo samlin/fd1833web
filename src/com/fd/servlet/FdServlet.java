@@ -37,6 +37,7 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
 
     /**
      * 定义了Servlet生命周期中的销毁方法
+     * 当在关闭服务器的时候,默认调用destory方法
      */
     @Override
     public void destroy() {
