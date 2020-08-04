@@ -11,7 +11,8 @@
     <title>登录页面</title>
 </head>
 <body>
-<form>
+<%--把form表单的get方式换成post方式提交,数据比较安全,并且不会在地址栏显示--%>
+<form method="post">
     姓名
     <input type="text" name="username">
     <br/>
