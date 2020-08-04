@@ -7,6 +7,8 @@
         <servlet-name>FdServlet</servlet-name>
         <servlet-class>com.fd.servlet.FdServlet</servlet-class>
 
+    <!--  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>FdServlet</servlet-name>
