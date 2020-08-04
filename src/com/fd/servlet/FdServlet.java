@@ -15,6 +15,7 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
     /**
      * 定义Servlet的声明周期的init方法,但是要注意重写有参的init(ServletConfig config)
      * 经过测试,启动tomcat时,,默认没有加载Servlet的初始化方法
+     * 默认在第一次请求Servlet时候,Servlet才先调用构造器,再调用init方法,最后调用service方法的实现doGet或doPost
      * @param config
      * @throws ServletException
      */
