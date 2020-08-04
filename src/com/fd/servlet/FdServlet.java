@@ -3,6 +3,7 @@ package com.fd.servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class FdServlet extends javax.servlet.http.HttpServlet {
     /**
@@ -31,6 +32,10 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
         //通过全局上下文ServletContext获取全局配置参数
         String password = config.getServletContext().getInitParameter("password");
         System.out.println("password = " + password);
+
+        //ServletContext().getResourceAsStream 可以直接获取web工程根路径下面的文件的内容
+        InputStream resourceAsStream = config.getServletContext().getResourceAsStream("index.jsp");
+        System.out.println("resourceAsStream = " + resourceAsStream);
     }
 
     @Override
