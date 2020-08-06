@@ -12,11 +12,19 @@ public class EncodingFilter implements Filter {
 
     }
 
+    /**
+     * 定义Filter的声明周期的init方法
+     * @param filterConfig
+     * @throws ServletException
+     */
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("EncodingFilter.init");
     }
 
+    /**
+     * 定义Filter的生命周期的destrory方法
+     */
     @Override
     public void destroy() {
         System.out.println("EncodingFilter.destroy");
