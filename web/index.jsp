@@ -16,5 +16,6 @@
 <a href="${pageContext.request.contextPath}/redirect" >演示重定向</a>
 <
 <a href="${pageContext.request.contextPath}/writer?name=zhangsan&age=40&name=lisi&name=wangwu" >演示getWriter</a>
+<a href="${pageContext.request.contextPath}/session" >演示Session</a>
 </body>
 </html>

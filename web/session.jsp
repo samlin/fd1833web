@@ -9,21 +9,10 @@
 <html>
 <head>
     <title>Title</title>
+    Session ID:
     <%
-        //        新建一个Cookie
-        Cookie cookie = new Cookie("address", "shenzhen");
-
-//
-//       设置session有效期 大于0是有效,单位是秒
-        cookie.setMaxAge(30);
-
-        //服务器端新建的Cookie,通过resp的addCookie返回到客户端(浏览器)
-        response.addCookie(cookie);
-
+        out.println(session.getId());
     %>
-
-    SessionID:
-    <%=session.getId()%>
 </head>
 <body>
 <a href="${pageContext.request.contextPath}/cookie">查看所有Cookie</a>
