@@ -14,5 +14,6 @@
 <h1> this is index </h1>
 <a href="${pageContext.request.contextPath}/forward" >演示转发</a>
 <a href="${pageContext.request.contextPath}/redirect" >演示重定向</a>
+<a href="${pageContext.request.contextPath}/writer" >演示getWriter</a>
 </body>
 </html>
