@@ -13,6 +13,13 @@
     <%
         out.println(session.getId());
     %>
+
+    <%
+        Object user = request.getSession().getAttribute(request.getServletContext().getInitParameter("loginUserSession"));
+        if (user != null) {
+            out.println(" 用户已经登录");
+        }
+    %>
 </head>
 <body>
 <a href="${pageContext.request.contextPath}/cookie">查看所有Cookie</a>

@@ -9,6 +9,12 @@
         <param-value>fd12345</param-value>
     </context-param>
 
+    <!-- 配置当前登录用户的session中name-->
+    <context-param>
+        <param-name>loginUserSession</param-name>
+        <param-value>LOGINUSERSESSION</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>FdServlet</servlet-name>
         <servlet-class>com.fd.servlet.FdServlet</servlet-class>
