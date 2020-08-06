@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1> this is index </h1>
-<a href="/forward" >演示转发</a>
+<h1>我是转发页面 </h1>
+
 </body>
 </html>
