@@ -11,7 +11,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class EncodingFilter implements Filter {
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOExceptionervletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException {
         System.out.println("EncodingFilter.doFilter");
 
         try {
