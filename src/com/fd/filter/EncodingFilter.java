@@ -9,7 +9,10 @@ import java.io.IOException;
 public class EncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        System.out.println("EncodingFilter.doFilter");
 
+//        如果当前过滤器检查没问题,那么就默认调用下一个过滤器,
+       filterChain.doFilter(servletRequest, servletResponse);
     }
 
     /**
