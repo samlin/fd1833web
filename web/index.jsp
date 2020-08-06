@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1> this is index </h1>
-<a href="/forward" >演示转发</a>
+<a href="${pageContext.request.contextPath}/forward" >演示转发</a>
+<a href="${pageContext.request.contextPath}/redirect" >演示重定向</a>
 </body>
 </html>

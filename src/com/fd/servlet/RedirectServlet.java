@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/forward")
-public class ForwardServlet extends HttpServlet {
+@WebServlet("/redirect")
+public class RedirectServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       doIt(req, resp);
@@ -20,15 +20,14 @@ public class ForwardServlet extends HttpServlet {
     }
 
     private void doIt(HttpServletRequest req, HttpServletResponse resp) {
-//        演示转发
+//        演示重定向
         System.out.println("ForwardServlet.doIt");
+
+
         try {
-//         在转发时,如果有jsp页面,那么必须要放在WEB-INF加以保护,让用户不能访问
-            req.getRequestDispatcher("/WEB-INF/forward.jsp").forward(req,resp);
-//          转发一般是工程下的路径,不能超越当前项目
-//            req.getRequestDispatcher("http://www.baidu.com").forward(req,resp);
-        } catch (ServletException e) {
-            e.printStackTrace();
+//            resp.sendRedirect("http://www.baidu.com");
+            //在重定向时,/代表整个http协议的跟路径,不是当前项目的跟路径,当前项目跟路径一般会丢失
+            resp.sendRedirect("/WEB-INF/forward.jsp");
         } catch (IOException e) {
             e.printStackTrace();
         }
