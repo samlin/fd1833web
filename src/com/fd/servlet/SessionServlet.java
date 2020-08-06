@@ -28,5 +28,8 @@ public class SessionServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+//        假设用户登录成功,那么就把用户放入到session中,在校验权限的地方对当前放入的值进行判断
+        session.setAttribute("user","loginUser");
     }
 }
