@@ -24,7 +24,9 @@ public class ForwardServlet extends HttpServlet {
         System.out.println("ForwardServlet.doIt");
         try {
 //         在转发时,如果有jsp页面,那么必须要放在WEB-INF加以保护,让用户不能访问
-            req.getRequestDispatcher("/WEB-INF/forward.jsp").forward(req,resp);
+//            req.getRequestDispatcher("/WEB-INF/forward.jsp").forward(req,resp);
+//          转发一般是工程下的路径,不能超越当前项目
+            req.getRequestDispatcher("http://www.baidu.com").forward(req,resp);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
