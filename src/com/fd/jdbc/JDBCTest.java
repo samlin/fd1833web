@@ -36,6 +36,14 @@ public class JDBCTest extends SuperJDBCTest {
     public void testCommit() throws Exception {
         //在JDBC中默认事务是自动提交,如果要测试事务特性,要把自动提交属性设置为false
         connection.setAutoCommit(false);
-
+        try {
+            int i = statement.executeUpdate("update users set name='zhangsan777' where id =1");
+            int j=1/0;
+//          上述代码执行成功则事务提交
+            connection.commit();
+        } catch (SQLException throwables) {
+//            如果发生异常,事务则回滚
+            connection.rollback();
+        }
     }
 }
