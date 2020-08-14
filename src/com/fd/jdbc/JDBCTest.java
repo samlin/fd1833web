@@ -1,9 +1,6 @@
 package com.fd.jdbc;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 public class JDBCTest {
     /**
@@ -37,5 +34,14 @@ public class JDBCTest {
     @After
     public void after() throws Exception{
         System.out.println("JDBCTest.after*************");
+    }
+
+    /**
+     * @After在所有单元测试执行完成后只执行一次
+     * @throws Exception
+     */
+    @AfterClass
+    public static void afterClass() throws Exception{
+        System.out.println("JDBCTest.afterClass<<<<<<<<<<<<<<<<<");
     }
 }
