@@ -60,4 +60,10 @@ public class SuperJDBCTest {
         //       3.得到执行Sql的statement
         statement = connection.createStatement();
     }
+
+    //通过重构的pull up 把子类的方法推送到父类
+    //把执行Sql的代码单独抽取成一个方法,变得通用
+    public void executeSql(String sql) throws SQLException {
+        statement.executeUpdate(sql);
+    }
 }

@@ -18,9 +18,4 @@ public class JDBCTest extends SuperJDBCTest {
         executeSql(sql);
     }
 
-    //把执行Sql的代码单独抽取成一个方法,变得通用
-    public void executeSql(String sql) throws SQLException {
-        statement.executeUpdate(sql);
-    }
-
 }
