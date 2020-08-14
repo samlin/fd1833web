@@ -1,8 +1,6 @@
 package com.fd.jdbc;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,13 +18,24 @@ public class JDBCTest {
 
     @Test
     public void testConnection() throws Exception {
+        statement.executeUpdate("update users set name='zhangsan567' where id=1");
 
-//      4.执行Sql语句
-        int i = statement.executeUpdate("update users set name='zhangsan123' where id=1");
+    }
 
-//      5.关闭statement connection
-        statement.close();
+    /**
+     * 所有的方法都执行完成,用来关闭Connection
+     * @throws SQLException
+     */
+    @AfterClass
+    public static void closeConnection() throws SQLException {
         connection.close();
+    }
+
+    @After
+    public void closeStatement() throws SQLException {
+        System.out.println("JDBCTest.closeStatement");
+        //      5.关闭statement connection
+        statement.close();
     }
 
     /**
@@ -35,7 +44,8 @@ public class JDBCTest {
      */
     @Before
     public void initStatement() throws SQLException {
-        //       3.得到执行Sql的statement
+        System.out.println("JDBCTest.initStatement");
+                //       3.得到执行Sql的statement
         statement = connection.createStatement();
     }
 
@@ -47,11 +57,11 @@ public class JDBCTest {
      */
     @BeforeClass
     public static void beforeClass() throws ClassNotFoundException, SQLException {
+        System.out.println("JDBCTest.beforeClass");
         //        1.注册驱动
         Class.forName("com.mysql.jdbc.Driver");
 
 //        2.得到连接对象
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1833", "root", "");
-        System.out.println("connection = " + connection);
     }
 }
