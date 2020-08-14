@@ -14,8 +14,8 @@ public class JDBCTest extends SuperJDBCTest {
 
     @Test
     public void testConnection() throws Exception {
-        String sql = "update users set name='zhangsan789' where id=1";
-        executeSql(sql);
+        //通过内联把只用了一次的变量直接传入
+        executeSql("update users set name='zhangsan789' where id=1");
     }
 
 }
