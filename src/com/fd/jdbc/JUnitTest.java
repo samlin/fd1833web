@@ -2,7 +2,7 @@ package com.fd.jdbc;
 
 import org.junit.*;
 
-public class JDBCTest {
+public class JUnitTest {
     /**
      * @BeforeClass 在当前所有的单元测试执行之前只执行一次
      * @throws Exception
