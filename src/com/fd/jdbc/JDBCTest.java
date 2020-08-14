@@ -19,6 +19,9 @@ public class JDBCTest {
 //       3.得到执行Sql的statement
         Statement statement = connection.createStatement();
 
+//      4.执行Sql语句
+        int i = statement.executeUpdate("update users set name='zhangsan' where id=1");
+
 
     }
 }
