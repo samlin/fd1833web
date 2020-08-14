@@ -22,6 +22,8 @@ public class JDBCTest {
 //      4.执行Sql语句
         int i = statement.executeUpdate("update users set name='zhangsan' where id=1");
 
-
+//      5.关闭statement connection
+        statement.close();
+        connection.close();
     }
 }
