@@ -32,4 +32,10 @@ public class JDBCTest extends SuperJDBCTest {
         preparedStatement.close();
     }
 
+    @Test
+    public void testCommit() throws Exception {
+        //在JDBC中默认事务是自动提交,如果要测试事务特性,要把自动提交属性设置为false
+        connection.setAutoCommit(false);
+
+    }
 }
