@@ -12,7 +12,8 @@ import java.sql.Statement;
 
 public class SuperJDBCTest {
     //把局部变量抽取成字段变量,方便别的方法也共享conneciton
-    private static Connection connection;
+    //如果把Connection设为子类访问,而不需要别的类访问,那么把当前字段可以设置为proedcted修饰符
+    protected static Connection connection;
     //    把statement抽取成一个字段对象,
     protected Statement statement;
 
