@@ -11,6 +11,9 @@
     <!-- 项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 -->
     <artifactId>FD1833JavaLesson</artifactId>
 
+    <!-- 把当前项目改成war格式-->
+    <packaging>war</packaging>
+
     <!--  添加jar,一般在下面加入jar的坐标即可(GAV) -->
     <dependencies>
         <dependency>
