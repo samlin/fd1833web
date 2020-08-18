@@ -19,6 +19,17 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--添加Servlet-API,解决对Servlet的依赖-->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <!--provided 只用测试,编译,打包时候可以忽略-->
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <!-- 版本号 -->
