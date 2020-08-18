@@ -48,6 +48,13 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!--加入jetty的插件,方便直接在maven项目中进行web调试-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.1.v20170120</version>
+            </plugin>
         </plugins>
     </build>
 </project>
