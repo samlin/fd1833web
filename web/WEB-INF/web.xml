@@ -17,7 +17,7 @@
 
     <servlet>
         <servlet-name>FdServlet</servlet-name>
-        <servlet-class>com.fd.servlet.FdServlet</servlet-class>
+        <servlet-class>main.java.fd.servlet.FdServlet</servlet-class>
 
     <!--  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1-->
 
@@ -38,7 +38,7 @@
 
     <filter>
         <filter-name>encodingFilter</filter-name>
-        <filter-class>com.fd.filter.EncodingFilter</filter-class>
+        <filter-class>main.java.fd.filter.EncodingFilter</filter-class>
     </filter>
 
     <filter-mapping>
