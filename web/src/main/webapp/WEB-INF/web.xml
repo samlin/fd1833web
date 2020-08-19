@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--定义全局可以访问的参数-->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>fd12345</param-value>
+    </context-param>
+
+    <!-- 配置当前登录用户的session中name-->
+    <context-param>
+        <param-name>loginUserSession</param-name>
+        <param-value>LOGINUSERSESSION</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>FdServlet</servlet-name>
+        <servlet-class>com.fd.servlet.FdServlet</servlet-class>
+
+    <!--  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1-->
+
+        <!-- 用来定义当前Servlet的配置属性 用ServletConfig对象获取  不变的写在代码中,变化的写在配置中 -->
+        <init-param>
+            <param-name>dbName</param-name>
+            <param-value>fd1833db</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FdServlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+
+    <!--定义一个Filter ,配置两个节点-->
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.fd.filter.EncodingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
