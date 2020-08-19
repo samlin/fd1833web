@@ -12,7 +12,11 @@
     <artifactId>FD1833JavaLesson</artifactId>
 
     <!-- 把当前项目改成war格式-->
-    <packaging>war</packaging>
+    <!--给当前项目创建子Module时,IDEA会自动把packaging修改为pom ,并且在下面添加子类的module名-->
+    <packaging>pom</packaging>
+    <modules>
+        <module>dao</module>
+    </modules>
 
     <!--  添加jar,一般在下面加入jar的坐标即可(GAV) -->
     <dependencies>
