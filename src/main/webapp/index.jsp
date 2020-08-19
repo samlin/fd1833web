@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.fd.controller.UserController" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2020/8/3
@@ -17,5 +17,9 @@
 <
 <a href="${pageContext.request.contextPath}/writer?name=zhangsan&age=40&name=lisi&name=wangwu" >演示getWriter</a>
 <a href="${pageContext.request.contextPath}/session" >演示Session</a>
+<br/>
+<% UserController userController=new UserController();
+    out.println(userController.getUserName());
+%>
 </body>
 </html>
