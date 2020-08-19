@@ -17,6 +17,7 @@
     <modules>
         <module>dao</module>
         <module>service</module>
+        <module>web</module>
     </modules>
 
     <!--  添加jar,一般在下面加入jar的坐标即可(GAV) -->
@@ -36,11 +37,6 @@
             <version>3.1.0</version>
             <!--provided 只用测试,编译,打包时候可以忽略-->
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fd</groupId>
-            <artifactId>service</artifactId>
-            <version>1.0</version>
         </dependency>
 
     </dependencies>
