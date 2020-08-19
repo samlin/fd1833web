@@ -37,6 +37,11 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.fd</groupId>
+            <artifactId>dao</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <!-- 版本号 -->
