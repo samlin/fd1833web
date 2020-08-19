@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>dao</module>
+        <module>service</module>
     </modules>
 
     <!--  添加jar,一般在下面加入jar的坐标即可(GAV) -->
