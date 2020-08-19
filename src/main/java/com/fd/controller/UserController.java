@@ -1,7 +1,7 @@
 package com.fd.controller;
 
 import com.fd.service.UserService;
-import com.fd.service.UserServiceImpl;
+import com.fd.service.impl.UserServiceImpl;
 
 /**
  * 定义MVC三层中的视图控制层
