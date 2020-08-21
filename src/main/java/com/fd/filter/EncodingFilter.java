@@ -22,7 +22,7 @@ public class EncodingFilter implements Filter {
 
         //因为HttpServletRequest方法比较多,一般在过滤器中都要强转
         HttpServletRequest req= (HttpServletRequest) servletRequest;
-//        如果当前过滤器检查没问题,那么就默认调用下一个过滤器,
+//        如果当前过滤器检查没问题,那么就默认调 用下一个过滤器,
         try {
             filterChain.doFilter(servletRequest, servletResponse);
         } catch (IOException e) {
