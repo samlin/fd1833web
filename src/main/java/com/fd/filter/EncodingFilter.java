@@ -12,7 +12,7 @@ import java.io.UnsupportedEncodingException;
 public class EncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException {
-        System.out.println("EncodingFilter.doFilt        er");
+        System.out.println("EncodingFilter.doFilt          er");
 
         try {
             servletRequest.setCharacterEncoding("UTF-8");
