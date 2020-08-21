@@ -33,9 +33,9 @@ public class FdServlet extends javax.servlet.http.HttpServlet {
         String password = config.getServletContext().getInitParameter("password");
         System.out.println("password = " + password);
 
-        //ServletContext().getResourceAsStream 可以直接获取web工程根路径下面的文件的内容
-        InputStream resourceAsStream = config.getServletContext().getResourceAsStream("index.jsp");
-        System.out.println("resourceAsStream = " + resourceAsStream);
+//        //ServletContext().getResourceAsStream 可以直接获取web工程根路径下面的文件的内容
+//        InputStream resourceAsStream = config.getServletContext().getResourceAsStream("index.jsp");
+//        System.out.println("resourceAsStream = " + resourceAsStream);
     }
 
     @Override
