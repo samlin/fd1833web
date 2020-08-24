@@ -15,13 +15,13 @@
         <param-value>LOGINUSERSESSION</param-value>
     </context-param>
 
-    <servlet>
+    <!--<servlet>
         <servlet-name>FdServlet</servlet-name>
         <servlet-class>com.fd.servlet.FdServlet</servlet-class>
 
-    <!--  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1-->
+    &lt;!&ndash;  load-on-startup  定义当前Servlet的启动顺序,默认值越小,启动越提前,默认从1&ndash;&gt;
 
-        <!-- 用来定义当前Servlet的配置属性 用ServletConfig对象获取  不变的写在代码中,变化的写在配置中 -->
+        &lt;!&ndash; 用来定义当前Servlet的配置属性 用ServletConfig对象获取  不变的写在代码中,变化的写在配置中 &ndash;&gt;
         <init-param>
             <param-name>dbName</param-name>
             <param-value>fd1833db</param-value>
@@ -32,11 +32,11 @@
     <servlet-mapping>
         <servlet-name>FdServlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
     <!--定义一个Filter ,配置两个节点-->
 
-    <filter>
+    <!--<filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>com.fd.filter.EncodingFilter</filter-class>
     </filter>
@@ -44,5 +44,5 @@
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
 </web-app>
