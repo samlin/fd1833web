@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.fd.service.UserService" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2020/8/24
@@ -12,5 +12,8 @@
 </head>
 <body>
 <h1>这个是三层架构主页面的程序</h1>
+<% UserService userService = new UserService();
+    out.println(userService.getUserName());
+%>
 </body>
 </html>
